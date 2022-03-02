@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css";
+import React, { useState } from "react";
+// import { useEffect } from "react";
+// import AllEmployees from "./components/AllEmployees";
+// imsssport AddEmployee from "./components/AddEmployee";
+import AddEmployee from "./components/AddEmployee";
+import AllEmployees from "./components/AllEmployees";
+// import EditEmployee from "./components/EditEmployee";
 
 function App() {
+  console.log("hello");
+  // const [edit, setEdit] = useState(false);
+  const [add, setAdd] = useState(false);
+  function toggleAdd() {
+    setAdd(!add);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1> hello app</h1>
+      {add ? <AddEmployee Add={toggleAdd} /> : <AllEmployees />}
+      {!add && (
+        <button onClick={() => setAdd(!add)}>{add ? "Back" : "Add"}</button>
+      )}
+      {/* <button onClick={() => setEdit(!edit)}>edit</button> */}
     </div>
   );
 }
