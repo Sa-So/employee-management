@@ -5,6 +5,9 @@ import axios from "axios";
 export const getAllEmployees = async () => {
   return await axios.get("http://localhost:3003/employees");
 };
+export const getEmployee = async (id) => {
+  return await axios.get(`http://localhost:3003/employees/${id}`);
+};
 export const postEmployees = async (employeeData) => {
   return await axios.post("http://localhost:3003/employees", employeeData);
 };
