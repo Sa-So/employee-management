@@ -42,7 +42,7 @@ export default function AddEmployee(props) {
       <h3>
         Email:
         <input
-          type="text"
+          type="email"
           name="Email"
           onChange={handleChange}
           value={employeeData.Email}
@@ -51,7 +51,7 @@ export default function AddEmployee(props) {
       <h3>
         Phone:
         <input
-          type="text"
+          type="phone"
           name="Phone"
           onChange={handleChange}
           value={employeeData.Phone}
@@ -60,7 +60,7 @@ export default function AddEmployee(props) {
       <h3>
         DOB:
         <input
-          type="text"
+          type="date"
           name="Dob"
           onChange={handleChange}
           value={employeeData.Dob}
