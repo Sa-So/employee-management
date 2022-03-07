@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./AllEmployees.css";
 // export default function AllEmployees(props) {
 
 // }
 import { getAllEmployees } from "../api/employees";
+// import EditEmployee from "./EditEmployee";
 // import api from "../api/employees";
 
 export default function AllEmployees(props) {
@@ -33,44 +35,63 @@ export default function AllEmployees(props) {
   return (
     <div>
       <h1>all employees </h1>
-      <div
+      <table id="empTable">
+        <tr
         // key={employee.id}
-        style={{
-          display: "flex",
-          //   marginRight: "10px",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <h4>id</h4>
-        <h4>Name</h4>
-        <h4>Email</h4>
-        <h4>Phone</h4>
-        <h4>Dob</h4>
-        <h4>Functions</h4>
-      </div>
-
-      {employees.map((employee) => (
-        <div
-          key={employee.id}
-          style={{
-            display: "flex",
-            // marginRight: "10px",
-            justifyContent: "space-around",
-            alignItems: "center",
-          }}
+        // style={{
+        //   display: "flex",
+        //   //   marginRight: "10px",
+        //   justifyContent: "space-around",
+        //   alignItems: "center",
+        // }}
         >
-          <h4>{employee.id}</h4>
-          <h4>{employee.Name}</h4>
-          <h4>{employee.Email}</h4>
-          <h4>{employee.Phone}</h4>
-          <h4>{employee.Dob}</h4>
-          {/* <h4>
-            <button onClick={handleDelete}>Delete</button>{" "}
-            <button onClick={handleUpdate}>Update</button>{" "}
-          </h4> */}
-        </div>
-      ))}
+          <th>id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Dob</th>
+          <th>Functions</th>
+        </tr>
+
+        {employees.map((employee) => (
+          <tr
+            key={employee.id}
+            // style={{
+            //   display: "flex",
+            //   // marginRight: "10px",
+            //   justifyContent: "space-around",
+            //   alignItems: "center",
+            // }}
+          >
+            <td>{employee.id}</td>
+            <td>{employee.Name}</td>
+            <td>{employee.Email}</td>
+            <td>{employee.Phone}</td>
+            <td>{employee.Dob}</td>
+            <td>
+              <button
+                onClick={() => {
+                  props.setEditId(employee.id);
+                  props.edit();
+                }}
+              >
+                Edit
+              </button>
+              {/* </td> */}
+
+              {/* <td> */}
+              <button
+                onClick={() => {
+                  // props.setDeleteId(employee.id);
+                  props.handleDelete(employee.id);
+                }}
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        ))}
+      </table>
     </div>
   );
 }
