@@ -11,7 +11,6 @@ export default function AddEmployee(props) {
     Phone: "",
     Dob: "",
   });
-
   function handleSubmit(event) {
     event.preventDefault();
     postEmployees(employeeData);
@@ -27,7 +26,6 @@ export default function AddEmployee(props) {
       };
     });
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <h3>

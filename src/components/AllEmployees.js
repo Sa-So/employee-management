@@ -1,13 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./AllEmployees.css";
-// export default function AllEmployees(props) {
-
-// }
 import { getAllEmployees } from "../api/employees";
-// import EditEmployee from "./EditEmployee";
-// import api from "../api/employees";
 
 export default function AllEmployees(props) {
   //   const [employees, setEmployees] = useState({ name: "pathak", class: "11" });

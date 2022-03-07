@@ -2,18 +2,25 @@ import axios from "axios";
 // export default axios.create({
 //   baseURL: "localhost:3003/",
 // });
+const url = "http://localhost:3003/";
+
+// export const getEmployeeById = async (id) => {
+//   const res = await axios.get(`${url}employees/${id}`);
+//   return res.data;
+// };
 export const getAllEmployees = async () => {
-  return await axios.get("http://localhost:3003/employees");
+  return await axios.get(`${url}employees/`);
 };
 export const getEmployee = async (id) => {
-  return await axios.get(`http://localhost:3003/employees/${id}`);
+  return await axios.get(`${url}employees/${id}`);
 };
 export const postEmployees = async (employeeData) => {
-  return await axios.post("http://localhost:3003/employees", employeeData);
+  return await axios.post(`${url}employees/`, employeeData);
 };
 export const deleteEmployee = async (id) => {
-  return await axios.delete(`http://localhost:3003/employees/${id}`);
+  return await axios.delete(`${url}employees/${id}`);
 };
 export const updateEmployee = async (id, employeeData) => {
-  return await axios.put(`http://localhost:3003/employees/${id}`, employeeData);
+  return await axios.put(`${url}employees/${id}`, employeeData);
 };
+// return promises;
