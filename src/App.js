@@ -1,12 +1,8 @@
 // import "./App.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useEffect } from "react";
-// import AllEmployees from "./components/AllEmployees";
-// imsssport AddEmployee from "./components/AddEmployee";
 import AddEmployee from "./components/AddEmployee";
 import AllEmployees from "./components/AllEmployees";
-// import EditEmployee from "./components/EditEmployee";
 import EditEmployee from "./components/EditEmployee";
 import { deleteEmployee } from "./api/employees";
 
@@ -19,31 +15,17 @@ function App() {
     setAdd(!add);
   }
   function toggleEdit() {
-    // setAdd(false);
-
-    // setEdit(!edit);
     setEdit(!edit);
     setAdd(false);
   }
   function setIdToEdit(id) {
     setId(id);
   }
-  // function deleteEmployee(id) {
-  //   console.log(id);
-  //   // const newEmployees = employees.filter((employee) => employee.id !== id);
-  //   // setEmployees(newEmployees);
-  //   const
-  // }
-
-  // function handleEdit(){
-
-  // }
   let navigate = useNavigate();
 
   function deleteEmployeeById(id) {
     deleteEmployee(id);
     navigate("/employees");
-    // window.location.reload();
   }
 
   return (

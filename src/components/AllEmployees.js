@@ -16,38 +16,16 @@ export default function AllEmployees(props) {
     const res = await getAllEmployees();
     setEmployees(res.data);
   };
-  //   const handleDelete = async (id) => {
-  //     await deleteEmployees(id);
-  //     getEmployees();
-  //   };
-  //   const handleUpdate = async (id, employeeData) => {
-  //     await updateEmployees(id, employeeData);
-  //     getEmployees();
-  //   };
-
   useEffect(() => {
     getEmployees();
-    // setEmployees(getAllEmployees());
-  }, []);
-  useEffect(() => {
-    getEmployees();
-    // setEmployees(getAllEmployees());
   }, [deleted]);
-  //   console.log(JSON.parse(employees.data));
+
   console.log(employees);
   return (
     <div>
       <h1>all employees </h1>
       <table id="empTable">
-        <tr
-        // key={employee.id}
-        // style={{
-        //   display: "flex",
-        //   //   marginRight: "10px",
-        //   justifyContent: "space-around",
-        //   alignItems: "center",
-        // }}
-        >
+        <tr>
           <th>id</th>
           <th>Name</th>
           <th>Email</th>
@@ -57,15 +35,7 @@ export default function AllEmployees(props) {
         </tr>
 
         {employees.map((employee) => (
-          <tr
-            key={employee.id}
-            // style={{
-            //   display: "flex",
-            //   // marginRight: "10px",
-            //   justifyContent: "space-around",
-            //   alignItems: "center",
-            // }}
-          >
+          <tr key={employee.id}>
             <td>{employee.id}</td>
             <td>{employee.Name}</td>
             <td>{employee.Email}</td>
@@ -80,9 +50,7 @@ export default function AllEmployees(props) {
               >
                 Edit
               </button>
-              {/* </td> */}
 
-              {/* <td> */}
               <button
                 onClick={() => {
                   // props.setDeleteId(employee.id);

@@ -13,7 +13,8 @@ export default function EditEmployee(props) {
     Dob: "",
   });
   //   const [id, setId] = useState(props.match.params.id);
-  const [id, setId] = useState(props.Id);
+  // const [id, setId] = useState(props.Id);
+  const id = props.Id;
 
   const getEmployeeById = async (id) => {
     const res = await getEmployee(id);
