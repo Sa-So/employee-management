@@ -25,8 +25,11 @@ export default function EditEmployee(props) {
   //   }, []);
 
   function handleSubmit(event) {
-    // event.preventDefault();
+    event.preventDefault();
+
     updateEmployee(id, employeeData);
+    // setId(id);
+    props.edit();
     // props.Add();
     // props.add(false);
   }
