@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./AllEmployees.css";
 import { getAllEmployees } from "../api/employees";
-// import { useNavigate } from "react-router-dom";
 
 export default function AllEmployees(props) {
   //   const [employees, setEmployees] = useState({ name: "pathak", class: "11" });
   const [employees, setEmployees] = useState([]);
+  const [deleted, setDeleted] = useState(false);
+  const handleDelete = (id) => {
+    console.log(id);
+    props.handleDelete(id);
+    setDeleted(!deleted);
+  };
 
   const getEmployees = async () => {
     const res = await getAllEmployees();
@@ -23,7 +28,11 @@ export default function AllEmployees(props) {
   useEffect(() => {
     getEmployees();
     // setEmployees(getAllEmployees());
-  }, [employees]);
+  }, []);
+  useEffect(() => {
+    getEmployees();
+    // setEmployees(getAllEmployees());
+  }, [deleted]);
   //   console.log(JSON.parse(employees.data));
   console.log(employees);
   return (
@@ -77,7 +86,7 @@ export default function AllEmployees(props) {
               <button
                 onClick={() => {
                   // props.setDeleteId(employee.id);
-                  props.handleDelete(employee.id);
+                  handleDelete(employee.id);
                 }}
               >
                 Delete
