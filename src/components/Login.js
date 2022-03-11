@@ -43,7 +43,7 @@ const Login = ({ setUser }) => {
             value={userDetails.password}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <button>Login</button>
       </form>
     </>
   );
