@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./AllEmployees.css";
 import { getAllEmployees } from "../api/employees";
+// import { useNavigate } from "react-router-dom";
 
 export default function AllEmployees(props) {
   //   const [employees, setEmployees] = useState({ name: "pathak", class: "11" });
@@ -22,7 +23,7 @@ export default function AllEmployees(props) {
   useEffect(() => {
     getEmployees();
     // setEmployees(getAllEmployees());
-  }, []);
+  }, [employees]);
   //   console.log(JSON.parse(employees.data));
   console.log(employees);
   return (

@@ -13,14 +13,18 @@ const Routing = () => {
     user && JSON.parse(user) ? setUser(user) : setUser(null);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("user", user);
+  }, [user]);
+
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home user={user} setUser={setUser} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/employee" element={<App />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route path="/employees" element={<App />} />
           <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>

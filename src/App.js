@@ -1,5 +1,6 @@
 // import "./App.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { useEffect } from "react";
 // import AllEmployees from "./components/AllEmployees";
 // imsssport AddEmployee from "./components/AddEmployee";
@@ -37,9 +38,12 @@ function App() {
   // function handleEdit(){
 
   // }
+  let navigate = useNavigate();
+
   function deleteEmployeeById(id) {
     deleteEmployee(id);
-    window.location.reload();
+    navigate("/employees");
+    // window.location.reload();
   }
 
   return (
@@ -54,6 +58,7 @@ function App() {
           setEditId={setIdToEdit}
           edit={toggleEdit}
           handleDelete={(id) => deleteEmployeeById(id)}
+          deleteId={id}
         />
       )}
       {!add && (

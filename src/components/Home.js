@@ -6,7 +6,7 @@ const Home = ({ user }) => {
     localStorage.removeItem("user");
     window.location.reload();
   };
-  return user ? (
+  return user === null ? (
     <div>
       <div>Please Login or Register to continue !</div>
       <Link to="/login">Login</Link>
