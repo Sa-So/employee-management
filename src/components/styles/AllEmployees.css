@@ -34,3 +34,14 @@
 /* button {
   margin-right: "50px";
 } */
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+button {
+  margin-top: 0px;
+}
+.button--add {
+  margin-top: 4rem;
+  text-align: center;
+}

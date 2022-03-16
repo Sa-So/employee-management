@@ -4,18 +4,17 @@ import App from "./App";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+// import { useNavigate } from "react-router-dom";
 
 const Routing = () => {
   const [user, setUser] = useState(null);
+  // change to context api
 
   useEffect(() => {
     const user = localStorage.getItem("user");
-    user && JSON.parse(user) ? setUser(user) : setUser(null);
+    // user && JSON.parse(user) ? setUser(user) : setUser(null);
+    user ? setUser(JSON.parse(user)) : setUser(null);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("user", user);
-  }, [user]);
 
   return (
     <div>

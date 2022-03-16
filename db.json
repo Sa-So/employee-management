@@ -1,32 +1,83 @@
 {
   "employees": [
     {
-      "id": 1,
-      "Name": "Sachin sdas",
-      "Email": "Sachin@gmail.com",
-      "Phone": "1234567890",
-      "Dob": "12/12/12"
-    },
-    {
-      "id": 2,
-      "Name": "sa",
-      "Email": "sa@gmail.com",
-      "Phone": "12120",
-      "Dob": "2022-03-22"
-    },
-    {
-      "id": 4,
-      "Name": "sdcsda",
-      "Email": "cds@gmail.com",
-      "Phone": "9019209",
-      "Dob": "2022-03-24"
-    },
-    {
       "id": 5,
-      "Name": "sa",
-      "Email": "sa@gmail.com",
-      "Phone": "98098",
+      "Name": "dfs",
+      "Email": "da@gmail.com",
+      "Phone": "asda",
+      "Dob": "2022-03-10"
+    },
+    {
+      "id": 6,
+      "Name": "sdcsdab",
+      "Email": "da@gmail.com",
+      "Phone": "asda",
+      "Dob": "2022-03-08"
+    },
+    {
+      "id": 7,
+      "Name": "sdcsdab",
+      "Email": "da@gmail.com",
+      "Phone": "asda",
       "Dob": "2022-03-29"
+    },
+    {
+      "id": 8,
+      "Name": "sdcsdab",
+      "Email": "da@gmail.com",
+      "Phone": "1234",
+      "Dob": "2022-03-23"
+    },
+    {
+      "id": 9,
+      "Name": "sdcsdab",
+      "Email": "da@gmail.com",
+      "Phone": "1234",
+      "Dob": "2022-03-04"
+    },
+    {
+      "id": 10,
+      "Name": "sdcsdab",
+      "Email": "da@gmail.com",
+      "Phone": "asda",
+      "Dob": "2022-03-23"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "Name": "sdsd",
+      "Email": "cds@gmail.com"
+    },
+    {
+      "email": "sada@gmail",
+      "password": "ewff",
+      "id": 2
+    },
+    {
+      "email": "sada@gmail",
+      "password": "ewff",
+      "id": 3
+    },
+    {
+      "email": "hr@veersatech.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "sa1@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "abc",
+      "id": 6
+    },
+    {
+      "email": "abcd@gmail.com",
+      "password": "abcd",
+      "id": 7
     }
   ]
 }

@@ -2,8 +2,13 @@ import axios from "axios";
 // export default axios.create({
 //   baseURL: "localhost:3003/",
 // });
-const url = "http://localhost:3003/";
+// const url = "http://localhost:3003/";
+// const url = { base: process.env.REACT_APP_API_URL };
 
+// url = url.base;
+// const url = process.env.REACT_APP_API_URL || "http://localhost:3003/";
+const url = process.env.REACT_APP_API_URL;
+console.log(url);
 // export const getEmployeeById = async (id) => {
 //   const res = await axios.get(`${url}employees/${id}`);
 //   return res.data;

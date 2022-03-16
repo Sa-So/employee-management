@@ -1,0 +1,39 @@
+/* change to mui */
+/* body {
+  background-color: #6edcd9;
+} */
+.body--container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  width: 320px;
+  margin: auto;
+}
+.box--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-evenly;
+  border: #e15fed solid 10px;
+  border-radius: 20px;
+  padding: 10%;
+  background-color: #9254c8;
+}
+.flex--buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttonClass {
+  margin: 0.5em;
+  background-color: #332fd0;
+  color: white;
+  font-size: large;
+}
+/* button {
+  background-color: #332fd0;
+  color: white;
+  font-size: large;
+} */
