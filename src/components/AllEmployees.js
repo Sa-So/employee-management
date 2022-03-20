@@ -3,74 +3,37 @@ import "./styles/AllEmployees.css";
 import { getAllEmployees } from "../api/employees";
 import { deleteEmployee } from "../api/employees";
 import Navbar from "./Navbar";
+import GridEmployees from "./GridEmployees";
+import ListEmployees from "./ListEmployees";
+import { Button } from "@mui/material";
 
 export default function AllEmployees(props) {
   //   const [employees, setEmployees] = useState({ name: "pathak", class: "11" });
-  const [employees, setEmployees] = useState([]);
-  // const [deleted, setDeleted] = useState(false);
-
-  const handleDelete = (id) => {
-    console.log(id);
-    // props.handleDelete(id);
-    deleteEmployee(id);
-    getEmployees();
-  };
-
-  const getEmployees = async () => {
-    const res = await getAllEmployees();
-    setEmployees(res.data);
-  };
-  useEffect(() => {
-    getEmployees();
-  }, []);
-
-  console.log(employees);
+  const [grid_or_list, setGrid_or_list] = useState("grid");
+  console.log("all employee rendered");
   return (
     <div>
       <Navbar />
-      <h1>all employees </h1>
-      <table id="empTable">
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Dob</th>
-            <th>Functions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {employees.map((employee) => (
-            <tr key={employee.id}>
-              <td>{employee.id}</td>
-              <td>{employee.Name}</td>
-              <td>{employee.Email}</td>
-              <td>{employee.Phone}</td>
-              <td>{employee.Dob}</td>
-              <td>
-                <button
-                  onClick={() => {
-                    props.setEditId(employee.id);
-                    props.edit();
-                  }}
-                >
-                  Edit
-                </button>
+      <Button onClick={() => setGrid_or_list("list")}>List</Button>
+      <Button onClick={() => setGrid_or_list("grid")}>Grid</Button>
 
-                <button
-                  onClick={() => {
-                    // props.setDeleteId(employee.id);
-                    handleDelete(employee.id);
-                  }}
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {console.log(grid_or_list)}
+
+      {grid_or_list === "grid" ? (
+        // <GridEmployees employees={employees} handleDelete={handleDelete} />
+        <GridEmployees />
+      ) : (
+        // <ListEmployees employees={employees} handleDelete={handleDelete} />
+        // <ListEmployees />
+        <ListEmployees
+          setEditId={props.setIdToEdit}
+          edit={props.toggleEdit}
+          deleteId={props.id}
+          add={props.add}
+          setAdd={props.setAdd}
+        />
+      )}
+
       <div className="button--add">
         <button onClick={() => props.setAdd(!props.add)}>
           {props.add ? "Back" : "Add"}

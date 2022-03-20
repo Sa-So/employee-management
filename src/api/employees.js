@@ -7,12 +7,13 @@ import axios from "axios";
 
 // url = url.base;
 // const url = process.env.REACT_APP_API_URL || "http://localhost:3003/";
-const url = process.env.REACT_APP_API_URL;
-console.log(url);
 // export const getEmployeeById = async (id) => {
 //   const res = await axios.get(`${url}employees/${id}`);
 //   return res.data;
 // };
+const url = process.env.REACT_APP_API_URL;
+console.log(url);
+
 export const getAllEmployees = async () => {
   return await axios.get(`${url}employees/`);
 };

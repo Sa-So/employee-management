@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles/Login.css";
+// import { PropTypes } from "@mui/material";
 // import { useContext } from "react";
 import { getUser } from "../api/users";
 const Login = ({ setUser }) => {
@@ -72,3 +73,7 @@ const Login = ({ setUser }) => {
 };
 
 export default Login;
+// propTypes: {
+//   setUser: PropTypes.func.isRequired,
+
+// };
