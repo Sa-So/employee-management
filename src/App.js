@@ -36,8 +36,8 @@ function App() {
         <EditEmployee Id={id} edit={toggleEdit} />
       ) : (
         <AllEmployees
-          setEditId={setIdToEdit}
-          edit={toggleEdit}
+          setEditId={(id) => setIdToEdit(id)}
+          toggleEdit={toggleEdit}
           handleDelete={(id) => deleteEmployeeById(id)}
           deleteId={id}
           add={add}
