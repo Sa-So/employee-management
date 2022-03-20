@@ -37,38 +37,38 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <>
-      <div className="body--container">
-        <div className="box--container">
-          <h3>{error}</h3>
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit} className="form__login">
-            <label>
-              Email:
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                value={userDetails.email}
-              />
-            </label>
-            <label>
-              Password:
-              <input
-                type="password"
-                name="password"
-                onChange={handleChange}
-                value={userDetails.password}
-              />
-            </label>
-            <button>Login</button>
-            <Link to="/register">
-              <button>Register</button>
-            </Link>
-          </form>
-        </div>
+    // <>
+    <div className="login--container">
+      <h3 className="error">{error}</h3>
+      <div className="login--box">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit} className="login--form">
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={userDetails.email}
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={userDetails.password}
+            />
+          </label>
+          <button className="login--button">Login</button>
+          <Link to="/register">
+            <button className="login--button ml-3">Register</button>
+          </Link>
+        </form>
       </div>
-    </>
+    </div>
+    // </>
   );
 };
 

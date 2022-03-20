@@ -7,6 +7,8 @@ import GridEmployees from "./GridEmployees";
 import ListEmployees from "./ListEmployees";
 import { Button } from "@mui/material";
 
+// App -> AllEmployees -> ListEmployees
+
 export default function AllEmployees(props) {
   //   const [employees, setEmployees] = useState({ name: "pathak", class: "11" });
   const [grid_or_list, setGrid_or_list] = useState("grid");
@@ -26,7 +28,7 @@ export default function AllEmployees(props) {
         // <ListEmployees employees={employees} handleDelete={handleDelete} />
         // <ListEmployees />
         <ListEmployees
-          setEditId={props.setIdToEdit}
+          setEditId={(id) => props.setEditId(id)}
           edit={props.toggleEdit}
           deleteId={props.id}
           add={props.add}

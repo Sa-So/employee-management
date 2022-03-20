@@ -22,26 +22,26 @@ const Register = () => {
     // props.Add();
   };
   return (
-    <div>
-      <div className="body--container">
-        <div className="box--container">
-          <h1>Register</h1>
-          <form onSubmit={handleSubmit}>
-            <label>
-              Email:
-              <input type="email" name="email" onChange={handleChange} />
-            </label>
-            <label>
-              Password:
-              <input type="password" name="password" onChange={handleChange} />
-            </label>
-            {/* <input type="submit" value="Submit" />
-             */}
-            <button>Sign Up</button>
-          </form>
-        </div>
+    // <div>
+    <div className="login--container">
+      <div className="login--box">
+        <h1>Register</h1>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Email:
+            <input type="email" name="email" onChange={handleChange} />
+          </label>
+          <label>
+            Password:
+            <input type="password" name="password" onChange={handleChange} />
+          </label>
+          {/* <input type="submit" value="Submit" />
+           */}
+          <button className="login--button">Sign Up</button>
+        </form>
       </div>
     </div>
+    // </div>
   );
 };
 

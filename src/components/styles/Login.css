@@ -1,3 +1,36 @@
 input {
   margin-bottom: 30px;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.login--container {
+  width: 100%;
+  height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+.login--box {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+}
+.login--button {
+  padding: 5%;
+  font-size: 0.52 em;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+.ml-3 {
+  margin-left: 3%;
+}
